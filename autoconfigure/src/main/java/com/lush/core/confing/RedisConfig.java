@@ -39,7 +39,6 @@ public class RedisConfig {
    * Method name : redisTemplate. Description : Create a RedisTemplate to serialize keys and values.
    *
    * @param jedisConnectionFactory
-   * @return RedisTemplate<String, Object>
    */
   @Bean
   public RedisTemplate<String, Object> redisTemplate(JedisConnectionFactory jedisConnectionFactory) {
