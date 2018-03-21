@@ -1,0 +1,6 @@
+apply plugin: "io.freefair.maven-publish-java"
+apply plugin: "io.freefair.maven-jars"
+
+dependencies {
+    compile project(':starters:okhttp3')
+}
