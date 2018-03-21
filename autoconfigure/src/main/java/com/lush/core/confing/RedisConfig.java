@@ -29,7 +29,7 @@ public class RedisConfig {
    * Method name : jedisConnectionFactory. Description : Create a JedisConnectionFactory to set the
    * host, port, and pool for the redis.
    *
-   * @return JedisConnectionFactory
+   * @return JedisConnectionFactory comment
    */
   @Bean
   public JedisConnectionFactory jedisConnectionFactory() {
@@ -43,7 +43,7 @@ public class RedisConfig {
   /**
    * Method name : redisTemplate. Description : Create a RedisTemplate to serialize keys and values.
    *
-   * @param jedisConnectionFactory
+   * @param jedisConnectionFactory comment
    */
   @Bean
   public RedisTemplate<String, Object> redisTemplate(JedisConnectionFactory jedisConnectionFactory) {

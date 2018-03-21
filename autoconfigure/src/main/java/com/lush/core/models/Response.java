@@ -49,12 +49,12 @@ public class Response {
   /**
    * Description : Constructor.
    *
-   * @param status
-   * @param message
+   * @param paramStatus comment
+   * @param message comment
    */
-  public Response(String status, String message) {
-    this.status = status;
-    this.message = message;
+  public Response(String paramStatus, String paramMessage) {
+    this.status = paramStatus;
+    this.message = paramMessage;
     this.data = "";
   }
 }
