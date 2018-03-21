@@ -79,9 +79,10 @@ public class Actuator {
 
   /**
    * Method name : setUri Description : Set uri for rest api.
+   * 
    * @param context
    * @return String
-   * @throws UnknownHostException
+   * @throws UnknownHostException chkpoint
    */
   public String setUri(String context) throws UnknownHostException {
     ip = InetAddress.getLocalHost();
@@ -91,8 +92,9 @@ public class Actuator {
 
   /**
    * Method name : endpoints. Description : Get endpoint list of api.
+   * 
    * @return ResponseEntity
-   * @throws UnknownHostException
+   * @throws UnknownHostException chkpoint
    */
   @GetMapping("/")
   public ResponseEntity<Object> endpoints() throws UnknownHostException {
@@ -138,8 +140,9 @@ public class Actuator {
 
   /**
    * healthz Check health.(application, database, redis)
+   *
    * @return Response
-   * @throws UnknownHostException
+   * @throws UnknownHostException chkpoint
    */
   @GetMapping("/healthz")
   public Response healthz() throws UnknownHostException {
