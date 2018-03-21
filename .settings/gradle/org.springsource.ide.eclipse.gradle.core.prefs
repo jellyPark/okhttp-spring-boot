@@ -1,0 +1,5 @@
+#org.springsource.ide.eclipse.gradle.core.preferences.GradleProjectPreferences
+#Wed Mar 21 14:31:20 KST 2018
+build.family.org.gradle.tooling.model.eclipse.HierarchicalEclipseProject=;autoconfigure;starters;starters/okhttp;starters/okhttp2;starters/okhttp3;
+org.springsource.ide.eclipse.gradle.linkedresources=
+org.springsource.ide.eclipse.gradle.rootprojectloc=
