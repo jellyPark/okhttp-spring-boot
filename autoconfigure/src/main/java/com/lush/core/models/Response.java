@@ -38,7 +38,7 @@ public class Response {
   /**
    * Description : Constructor.
    *
-   * @param status return status
+   * @param paramStatus return status
    */
   public Response(String paramStatus) {
     this.status = paramStatus;
