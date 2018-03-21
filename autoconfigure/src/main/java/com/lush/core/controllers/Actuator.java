@@ -80,8 +80,8 @@ public class Actuator {
   /**
    * Method name : setUri Description : Set uri for rest api.
    * 
-   * @param context
-   * @return String
+   * @param context param
+   * @return String return
    * @throws UnknownHostException chkpoint
    */
   public String setUri(String context) throws UnknownHostException {

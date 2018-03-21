@@ -38,10 +38,10 @@ public class Response {
   /**
    * Description : Constructor.
    *
-   * @param status
+   * @param status return status
    */
-  public Response(String status) {
-    this.status = status;
+  public Response(String paramStatus) {
+    this.status = paramStatus;
     this.message = "";
     this.data = "";
   }
