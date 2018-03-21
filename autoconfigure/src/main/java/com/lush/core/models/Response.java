@@ -50,7 +50,7 @@ public class Response {
    * Description : Constructor.
    *
    * @param paramStatus comment
-   * @param message comment
+   * @param paramMessage comment
    */
   public Response(String paramStatus, String paramMessage) {
     this.status = paramStatus;
