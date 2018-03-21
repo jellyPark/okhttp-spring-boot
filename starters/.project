@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>okhttp-spring-boot</name>
+	<name>starters</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -17,7 +17,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1521611894378</id>
+			<id>1521611894571</id>
 			<name></name>
 			<type>26</type>
 			<matcher>
@@ -25,11 +25,15 @@
 				<arguments>
 					<matcher>
 						<id>org.eclipse.ui.ide.multiFilter</id>
-						<arguments>1.0-projectRelativePath-equals-true-false-autoconfigure</arguments>
+						<arguments>1.0-projectRelativePath-equals-true-false-okhttp</arguments>
 					</matcher>
 					<matcher>
 						<id>org.eclipse.ui.ide.multiFilter</id>
-						<arguments>1.0-projectRelativePath-equals-true-false-starters</arguments>
+						<arguments>1.0-projectRelativePath-equals-true-false-okhttp2</arguments>
+					</matcher>
+					<matcher>
+						<id>org.eclipse.ui.ide.multiFilter</id>
+						<arguments>1.0-projectRelativePath-equals-true-false-okhttp3</arguments>
 					</matcher>
 				</arguments>
 			</matcher>
