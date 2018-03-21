@@ -19,6 +19,12 @@ import com.lush.core.models.EndpointDto;
 import com.lush.core.models.EndpointModel;
 import com.lush.core.models.Response;
 
+/**
+ * endpoint Actuator
+ * 
+ * @author IT3
+ *
+ */
 @RestController
 public class Actuator {
 
@@ -73,7 +79,6 @@ public class Actuator {
 
   /**
    * Method name : setUri Description : Set uri for rest api.
-   *
    * @param context
    * @return String
    * @throws UnknownHostException
@@ -86,7 +91,6 @@ public class Actuator {
 
   /**
    * Method name : endpoints. Description : Get endpoint list of api.
-   *
    * @return ResponseEntity
    * @throws UnknownHostException
    */
@@ -134,7 +138,6 @@ public class Actuator {
 
   /**
    * healthz Check health.(application, database, redis)
-   *
    * @return Response
    * @throws UnknownHostException
    */
