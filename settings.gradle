@@ -1,0 +1,6 @@
+include 'autoconfigure'
+include 'starters:okhttp'
+include 'starters:okhttp2'
+include 'starters:okhttp3'
+
+rootProject.name = 'okhttp-spring-boot'
