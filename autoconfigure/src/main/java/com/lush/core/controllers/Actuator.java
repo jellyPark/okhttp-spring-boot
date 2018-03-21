@@ -97,11 +97,18 @@ public class Actuator {
    * @throws UnknownHostException chkpoint
    */
   @GetMapping("/")
-  public ResponseEntity<Object> endpoints() throws UnknownHostException {
+  public ResponseEntity<Object> endpoints() throws UnknownHostException, NullPointerException {
     // Get endpoints data.
     String uri = setUri("mappings");
     ResponseEntity<JsonNode> data = restTemplate.getForEntity(uri, JsonNode.class);
-    JsonNode dataBody = data.getBody().findPath("dispatcherServlet");
+
+    JsonNode data1 = data.getBody();
+
+    if (data1 == null) {
+      throw new IllegalStateException();
+    }
+
+    JsonNode dataBody = data1.findPath("dispatcherServlet");
 
     // Find all method and uri
     List<JsonNode> methods = dataBody.findValues("methods");
@@ -136,6 +143,7 @@ public class Actuator {
     endpoints.setEndpoints(endpointList);
 
     return new ResponseEntity<Object>(endpoints, HttpStatus.OK);
+
   }
 
   /**
@@ -151,6 +159,12 @@ public class Actuator {
     // Get health data.
     String uri = setUri("health");
     ResponseEntity<String> health = restTemplate.getForEntity(uri, String.class);
+    String health1 = health.getBody();
+
+    if (health1 == null) {
+      throw new IllegalStateException();
+    }
+
     JsonObject healthBody = gson.fromJson(health.getBody(), JsonObject.class);
     String appStatus = healthBody.get("status").getAsString();
 
@@ -160,8 +174,9 @@ public class Actuator {
       response.setMessage("AppStatus is fail");
     }
 
+
     // Check status of database connection.
-    if (health.getBody().contains("db")) {
+    if (health1.contains("db")) {
       JsonObject temp = healthBody.get("details").getAsJsonObject();
       temp = temp.get("db").getAsJsonObject();
       String dbStatus = temp.get("status").getAsString();
@@ -178,7 +193,7 @@ public class Actuator {
     }
 
     // Check status of redis connection.
-    if (health.getBody().contains("redis")) {
+    if (health1.contains("redis")) {
       JsonObject temp = healthBody.get("details").getAsJsonObject();
       temp = temp.get("redis").getAsJsonObject();
       String redisStatus = temp.get("status").getAsString();
