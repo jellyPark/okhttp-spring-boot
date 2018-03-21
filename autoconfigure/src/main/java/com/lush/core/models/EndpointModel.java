@@ -4,6 +4,12 @@ import java.util.List;
 import lombok.Data;
 import com.lush.core.models.EndpointDto.Info;
 
+/**
+ * EndpointModel
+ * 
+ * @author IT3
+ *
+ */
 @Data
 public class EndpointModel {
 

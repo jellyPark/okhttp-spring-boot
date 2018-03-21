@@ -2,6 +2,12 @@ package com.lush.core.models;
 
 import lombok.Data;
 
+/**
+ * Response
+ * 
+ * @author IT3
+ *
+ */
 @Data
 public class Response {
 
